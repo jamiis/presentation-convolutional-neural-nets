@@ -67,6 +67,11 @@
                     <h2>Visualizing &amp; Optimizing Convolutional Neural Nets</h2>
                     <p>
                         <small>
+                            <a target="_blank" href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">
+                            <q>ImageNet Classification with Deep Convolutional Neural Networks</q>
+                            </a>, Krizhevsky, Sutskever, &amp; Hinton
+                        </small>
+                        <small>
                             <a target="_blank" href="http://ftp.cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf">
                             <q>Visualizing &amp; Understanding Convolutional Networks</q>
                             </a>, 
@@ -84,22 +89,71 @@
                 </section>
 
                 <section>
-                    <h3>Neural Net Progress</h3>
-                    <ul>
-                        <li>Hinton (Google, Toronto) and LeCun (Facebook, NYU). LeCun doing convents since '89.</li>
-                        <li>
-                            <a target="_blank" href="http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf">Krizhevsky's huge advancement on ImageNet 2012</a>.
-                            16.4% error rate vs. 2nd place 26.1%
-                        </li>
-                    </ul>
+                    <h3>Convolutioanl Neural Net Origination</h3>
+                    <table>
+                        <tr>
+                            <td><small>Hinton (Toronto, Google)</small></td>
+                            <td><small>LeCun (Facebook, NYU)</small></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/geoffh.jpg" height="400px"></td>
+                            <td><img src="img/yannl.jpg"  height="400px"  width="270px"></td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <a target="_blank" href="http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf">
+                        ImageNet Classification with Deep Conv Neural Networks
+                    </a>
+                    <p>
+                        <div>
+                            Alex Krizhevsky, Ilya Sutskever, Geoff Hinton
+                        </div>
+                        <div>
+                            <img src="img/kriz.jpeg" height="300px">
+                        </div>
+                        <p>
+                        ImageNet 2012: 1.3M/50k/100k, 1000 categories
+                        </p>
+                        <p>
+                        16.4% error rate vs. 2nd place 26.1%
+                        </p>
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Conv Net Architecture</h3>
+                    <img src="img/convolution-step.gif" height="200px">
+                    <img src="img/mylenet.png">
                 </section>
 
                 <section>
                     <a target="_blank" href="http://ftp.cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf">
                         <q>Visualizing &amp; Understanding Convolutional Networks</q>
-                    </a>, ECCV 2014
-                    <p>Matt Zeiler (NYU, Clarifai, add photo), Rob Fergus (NYU)</p>
-                    <q>Despite this encouraging progress, there is still little insight into the internal operation and behavior of these complex models, or how they achieve such good performance. From a scientific standpoint, this is deeply unsatisfactory. With- out clear understanding of how and why they work, the development of better models is reduced to trial-and-error.</q>
+                    </a>, 2014
+                    <p>
+                    
+                    <table>
+                        <tr>
+                            <td><small>Matt Zeiler (NYU, Clarifai)</small></td>
+                            <td><small>Rob Fergus (NYU)</small></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/mattz.jpg" > </td>
+                            <td><img src="img/robf.png"> </td>
+                        </tr>
+                    </table>
+                    <small>
+                        <q>
+                            "Despite this encouraging progress, there is still 
+                            little insight into the internal operation and 
+                            behavior of these complex models, or how they achieve 
+                            such good performance. From a scientific standpoint, 
+                            this is deeply unsatisfactory. Without clear 
+                            understanding of how and why they work, the development 
+                            of better models is reduced to trial-and-error."
+                        </q>
+                    </small>
                 </section>
 
                 <section>
@@ -107,21 +161,163 @@
                         Deconvolutional Networks
                     </a>, Matt Zeiler, 2010
                     <p>
-                    <img src="img/deconv-architecture.png" height="550px">
+                        <img src="img/deconv-architecture.png" height="550px">
                     </p>
+                    <!--
+                    <small>
+                    Maps activations at higher layers back to the input image. 
+                    </small>
+                    <small>
+                        Same components as convnets but in reverse.
+                    </small>
+                    -->
                 </section>
 
                 <section>
                     <h3>Feature Visualization</h3>
+                    <img src="img/feature-viz-1-to-2.png">
+                    <q>
+                        "The projections from each layer show the hierarchical nature of the features in the network. Layer 2 responds to corners and other edge/color conjunctions"
+                    </q>
+                </section>
+
+                <section>
+                    <h3>Feature Visualization</h3>
+                    <img src="img/feature-viz-3.png">
+                    <q>
+                        "Layer 3 has more complex invariances, capturing similar textures (e.g. mesh patterns (Row 1, Col 1); text (R2,C4))"
+                    </q>
+                </section>
+
+                <section>
+                    <h3>Feature Visualization</h3>
+                    <img src="img/feature-viz-4-to-5.png">
+                    <q>
+                        "Layer 4 shows significant variation, and is more class-specific: dog faces (R1,C1); bird’s legs (R4,C2). Layer 5 shows entire objects with significant pose variation, e.g. keyboards (R1,C11) and dogs (R4)"
+                    </q>
                 </section>
 
                 <section>
                     <h3>Layer Evolution</h3>
+                    <img src="img/layer-evolution-1.png">
+                    Epochs 1, 2, 5, 10, 20, 30, 40, 64
                 </section>
+
+                <section>
+                    <h3>Layer Evolution</h3>
+                    <img src="img/layer-evolution-2.png">
+                    Epochs 1, 2, 5, 10, 20, 30, 40, 64
+                </section>
+
+                <section>
+                    <h3>
+                        Occlusion
+                    </h3>
+                    <img src="img/occlusion.png">
+                </section>
+
+                <section>
+                    <h3>
+                        Ablation
+                    </h3>
+                    <img src="img/ablation.png" height="350px">
+                    <p>
+                    <q>
+                        <small>
+                            "For both datasets, a steady improvement can be seen as we ascend the model, with best results being obtained by using all layers. This supports the premise that as the feature hierarchies become deeper, they learn increasingly powerful features."
+                        </small>
+                    </q>
+                    </p>
+                </section>
+
+                <section>
+                    <h3> 
+                        Generalized Feature Detector
+                    </h3>
+                    <img src="img/generalized-feat.png" height="550px">
+                </section>
+
                 <section>
                     <a target="_blank" href="http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/43022.pdf">
                         Going Deeper with Convolutions
-                    </a>, arXiv:1409.4842, 2014, Christian Szegedy, Wei Liu, Yangqing Jia, et al
+                    </a>, 2014,
+                    <br>
+                    Christian Szegedy, Wei Liu, Yangqing Jia, et al
+                    <br>
+                    <br>
+                    <small>
+                        Codenamed: Inception
+                    </small>
+                    <div>
+                        <img src="img/deeper-meme.jpg">
+                    </div>
+                    <small>
+                        <q>
+                            "Our GoogLeNet submission to ILSVRC 2014 actually uses 12× fewer parameters than the winning architecture of Krizhevsky et al [9] from two years ago, while being significantly more accurate"
+                        </q>
+                    </small>
+                </section>
+
+                <section>
+                    <h3>
+                        Motivation
+                    </h3>
+                    <p>
+                    <small>
+                        <q>Provable Bounds for Learning Some Deep Representations</q>.
+                        Sanjeev Arora, Aditya Bhaskara, Rong Ge, and Tengyu Ma. CoRR, abs/1310.6343, 2013.
+                    </small>
+                    </p>
+                    <p>
+                    <q>
+                        <small>
+                            "Their main result states that if the probability distribution of the data-set is representable by a large, very sparse deep neural network, then the optimal network topology can be constructed layer by layer by analyzing the correlation statistics of the activations of the last layer and clustering neurons with highly correlated outputs"
+                        </small>
+                    </q>
+                    </p>
+                    <p>
+                    <q>
+                        Neurons that fire together, wire together
+                    </q>
+                    -Hebbian principle
+                    </p>
+                </section>
+
+                <section>
+                    <h3>
+                        Efficiency
+                    </h3>
+                    <q>
+                        "Our GoogLeNet submission to ILSVRC 2014 actually uses 12× fewer parameters than the winning architecture of Krizhevsky et al [9] from two years ago, while being significantly more accurate"
+                    </q>
+                </section>
+
+                <section>
+                    <h3>
+                        Inception Module Naive
+                    </h3>
+                    <img src="img/inception-a.png">
+                </section>
+
+                <section>
+                    <h3>
+                        Inception Module
+                    </h3>
+                    <img src="img/inception-b.png">
+                </section>
+
+                <section>
+                    <h3>Architecture</h3>
+                    <a target="_blank" href="http://www.gageet.com/wp-content/uploads/2014/09/googlenet.jpg">
+                        <img src="img/googlenet-arch.jpg" >
+                    </a>
+                </section>
+
+                <section>
+                    <h3>
+                        Performance
+                    </h3>
+                    <img src="img/googlenet-performance.png">
                 </section>
 
 			</div>
